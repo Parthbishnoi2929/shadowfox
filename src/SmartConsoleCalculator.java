@@ -35,6 +35,8 @@ public class SmartConsoleCalculator {
         System.out.println("Choose function:");
         System.out.println("1. Square Root");
         System.out.println("2. Exponentiation (x^y)");
+        System.out.println("3. Sine (in degrees)");
+        System.out.println("4. Cosine (in degrees)");
         System.out.print("Your choice: ");
         int choice = sc.nextInt();
 
@@ -51,6 +53,18 @@ public class SmartConsoleCalculator {
                 System.out.print("Enter exponent: ");
                 double exp = sc.nextDouble();
                 System.out.println("Result: " + Math.pow(base, exp));
+            }
+            case 3 -> {
+                System.out.print("Enter angle in degrees: ");
+                double degrees = sc.nextDouble();
+                double radians = Math.toRadians(degrees);
+                System.out.println("Result (sin): " + Math.sin(radians));
+            }
+            case 4 -> {
+                System.out.print("Enter angle in degrees: ");
+                double degrees = sc.nextDouble();
+                double radians = Math.toRadians(degrees);
+                System.out.println("Result (cos): " + Math.cos(radians));
             }
             default -> System.out.println("Invalid scientific operation.");
         }
